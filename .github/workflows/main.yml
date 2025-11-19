@@ -1,0 +1,80 @@
+name: 👷 Continuous Deployment
+
+on:
+  push:
+    branches:
+      - master
+      - ci
+
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  Build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest, windows-latest]
+        version: ['6.4.0']
+    steps:
+      -
+        uses: actions/checkout@v2
+      -
+        name: 📦 Cache Qt
+        id: cache-qt
+        uses: actions/cache@v2
+        with:
+          path: ${{ github.workspace }}/Qt-${{ runner.os }}-${{ matrix.version }}
+          key: ${{ runner.os }}-QtCache-${{ matrix.version }}-modules
+      -
+        name: ⬇ Install Qt
+        uses: jurplel/install-qt-action@v2
+        with:
+          version: ${{ matrix.version }}
+          dir: ${{ github.workspace }}/Qt-${{ runner.os }}-${{ matrix.version }}
+          cached: ${{ steps.cache-qt.outputs.cache-hit }}
+          aqtversion: ==1.2.2 # See miurahr/aqtinstall#288
+      -
+        name: 🔧 CMake
+        run: |
+          mkdir -p build
+          cmake -DQATERIAL_ENABLE_HOTRELOAD=ON -DQATERIAL_ENABLE_TOOLS=ON -DQATERIAL_ENABLE_TESTS=ON -DCMAKE_BUILD_TYPE="Release" -B build -S .
+        shell: bash
+      -
+        name: 🔨 Qaterial
+        run: cmake --build build --target "Qaterial" --config "Release" -j
+      -
+        name: 🔨 QaterialTestLoader
+        run: cmake --build build --target "QaterialTestLoader" --config "Release" -j
+      -
+        name: ✅ Unit Tests
+        run: cd build && ctest --build-config "Release" --progress --verbose --parallel 12
+        if: "!contains(matrix.os, 'ubuntu')"
+      -
+        name: ✅ Unit Tests
+        run: |
+          sudo apt install libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-xinerama0 libxcb-keysyms1 libxcb1 libxcb-render-util0 libxcb-randr0
+          cd build
+          xvfb-run ctest --build-config "Release" --progress --verbose --parallel 12
+        if: contains(matrix.os, 'ubuntu')
+
+  # BuildWasm:
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #   -
+  #     uses: actions/checkout@v2
+  #   -
+  #     name: 🔧 Prepare
+  #     id: prep
+  #     run: |
+  #       # Set output parameters.
+  #       export DOCKER_TAG="reivilo1234/qt-webassembly-cmake:qt5.15-em1.39.10"
+  #       echo ::set-output name=tags::${DOCKER_TAG}
+  #   -
+  #     name: 🔧 Configure
+  #     run: mkdir -p build && docker run --rm -v $(pwd):/src/ -u $(id -u):$(id -g) ${{ steps.prep.outputs.tags }} cmake -B ./build/ -S . ..
+  #   -
+  #     name: 🔨 Build
+  #     run: docker run --rm -v $(pwd):/src/ -u $(id -u):$(id -g) ${{ steps.prep.outputs.tags }} make -C build -j
