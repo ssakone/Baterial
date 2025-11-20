@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "cmath": "cpp",
-        "set": "cpp",
-        "cstdint": "cpp"
-    }
-}
