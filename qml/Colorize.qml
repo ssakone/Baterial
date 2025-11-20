@@ -53,7 +53,6 @@
 */
 import QtQuick
 import QtQuick.Effects
-import GraphicalEffects
 
 Item {
     id: rootItem
