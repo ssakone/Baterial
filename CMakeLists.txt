@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # import
 
-include(cmake/GenerateQrcAliasObject.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/GenerateQrcAliasQtObject.cmake)
 
 # Sources
 file(GLOB_RECURSE QATERIAL_SRCS "src/*.cpp" "src/*.hpp")
