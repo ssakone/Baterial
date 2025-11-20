@@ -99,6 +99,18 @@ function(qt_generate_qrc_alias_qt_object VAR)
           set(PROPERTY_NAME ${PROPERTY_NAME}_)
         endif()
 
+        if(PROPERTY_NAME MATCHES "^[0-9]")
+          string(REGEX MATCH "^[0-9]+" PROPERTY_LEADING_DIGITS "${PROPERTY_NAME}")
+          string(REGEX REPLACE "^[0-9]+" "" PROPERTY_NAME_NO_DIGITS "${PROPERTY_NAME}")
+          if(PROPERTY_NAME_NO_DIGITS STREQUAL "")
+            set(PROPERTY_NAME_NO_DIGITS "icon")
+          endif()
+          string(SUBSTRING ${PROPERTY_NAME_NO_DIGITS} 0 1 PROPERTY_NAME_FIRST_CHAR)
+          string(TOLOWER ${PROPERTY_NAME_FIRST_CHAR} PROPERTY_NAME_FIRST_CHAR)
+          string(REGEX REPLACE "^.(.*)" "${PROPERTY_NAME_FIRST_CHAR}\\1" PROPERTY_NAME_NO_DIGITS "${PROPERTY_NAME_NO_DIGITS}")
+          set(PROPERTY_NAME "${PROPERTY_NAME_NO_DIGITS}${PROPERTY_LEADING_DIGITS}")
+        endif()
+
         string(APPEND OUT_CONTENT
           "  "
           "readonly property string ${PROPERTY_NAME}: "
