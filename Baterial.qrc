@@ -12055,5 +12055,12 @@
     <file>assets/material-icons/zodiac-scorpio.svg</file>
     <file>assets/material-icons/zodiac-taurus.svg</file>
     <file>assets/material-icons/zodiac-virgo.svg</file>
+    <file>assets/shaders/colorize.frag.qsb</file>
+    <file>assets/shaders/coloroverlay.frag.qsb</file>
+    <file>assets/shaders/lineargradient.vert.qsb</file>
+    <file>assets/shaders/lineargradient_mask.frag.qsb</file>
+    <file>assets/shaders/lineargradient_nomask.frag.qsb</file>
+    <file>assets/shaders/opacitymask.frag.qsb</file>
+    <file>assets/shaders/opacitymask_invert.frag.qsb</file>
   </qresource>
 </RCC>

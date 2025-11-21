@@ -4,6 +4,7 @@ project(Qaterial VERSION 1.0 LANGUAGES CXX)
 
 find_package(Qt6 REQUIRED COMPONENTS Quick Qml Svg Xml QuickPrivate GuiPrivate)
 
+set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -14,9 +15,9 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/GenerateQrc.cmake)
 # Material Design Icons directory
 set(MATERIALDESIGNICONS_ICONS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/assets/material-icons")
 
-qt_standard_project_setup()
+# qt_standard_project_setup()
 
-# generation 
+# generation
 file(REMOVE "${CMAKE_CURRENT_BINARY_DIR}/qml/Icons.qml")
 file(REMOVE "${CMAKE_CURRENT_BINARY_DIR}/qml/HugeIcons.qml")
 
@@ -26,7 +27,8 @@ qt_generate_qrc(
   DEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}
   NAME "Baterial.qrc"
   PREFIX 
-  GLOB_EXPRESSION "*.svg" "*.png"
+  # Include precompiled shader binaries so Qt can load .qsb on all platforms.
+  GLOB_EXPRESSION "*.svg" "*.png" "*.qsb"
   ALWAYS_OVERWRITE
   RECURSE
 )
@@ -75,6 +77,7 @@ foreach(singleton_file IN LISTS singleton_files)
 endforeach()
 
 # Define the QML module
+qt6_add_library(Qaterial STATIC)
 qt_add_qml_module(Qaterial
     URI "Qaterial"
     VERSION 1.0
@@ -86,10 +89,10 @@ qt_add_qml_module(Qaterial
 )
 
 # Flatten QML resource paths (remove qml/ prefix)
-foreach(qml_file ${QATERIAL_QML})
-    get_filename_component(file_name ${qml_file} NAME)
-    set_source_files_properties(${qml_file} PROPERTIES QT_RESOURCE_ALIAS "${file_name}")
-endforeach()
+# foreach(qml_file ${QATERIAL_QML})
+#     get_filename_component(file_name ${qml_file} NAME)
+#     set_source_files_properties(${qml_file} PROPERTIES QT_RESOURCE_ALIAS "${file_name}")
+# endforeach()
 
 
 
@@ -108,13 +111,13 @@ target_link_libraries(Qaterial PRIVATE
     Qt6::GuiPrivate
 )
 
-if (BUILD_SHARED_LIBS)
-    target_compile_definitions(Qaterial PRIVATE QATERIAL_SHARED)
-else()
-    target_compile_definitions(Qaterial PUBLIC QATERIAL_STATIC)
-endif()
+# if (BUILD_SHARED_LIBS)
+#     target_compile_definitions(Qaterial PRIVATE QATERIAL_SHARED)
+# else()
+#     target_compile_definitions(Qaterial PUBLIC QATERIAL_STATIC)
+# endif()
 
 
 # Compatibility target for graphicaleffects
-add_library(graphicaleffects INTERFACE)
-target_link_libraries(graphicaleffects INTERFACE Qaterial)
+# add_library(graphicaleffects INTERFACE)
+# target_link_libraries(graphicaleffects INTERFACE Qaterial)

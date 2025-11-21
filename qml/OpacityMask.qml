@@ -143,6 +143,7 @@ Item {
         anchors.fill: parent
         visible: rootItem.invert && !rootItem.cached
 
-        fragmentShader: "qrc:/Qaterial/assets/shaders/opacitymask.frag.qsb"
+        // Shaders are embedded in the Qaterial resource root under /assets.
+        fragmentShader: "qrc:/assets/shaders/opacitymask.frag.qsb"
     }
 }

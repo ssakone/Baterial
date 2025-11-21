@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/Qaterial">
+    <qresource prefix="/">
         <file>assets/shaders/colorize.frag.qsb</file>
         <file>assets/shaders/coloroverlay.frag.qsb</file>
         <file>assets/shaders/lineargradient.vert.qsb</file>
