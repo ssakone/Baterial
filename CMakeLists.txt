@@ -88,6 +88,13 @@ qt_add_qml_module(Qaterial
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Qaterial
 )
 
+get_target_property(QATERIAL_TYPE Qaterial TYPE)
+if(QATERIAL_TYPE STREQUAL "SHARED_LIBRARY")
+    target_compile_definitions(Qaterial PRIVATE QATERIAL_SHARED)
+elseif(QATERIAL_TYPE STREQUAL "STATIC_LIBRARY")
+    target_compile_definitions(Qaterial PUBLIC QATERIAL_STATIC)
+endif()
+
 # Flatten QML resource paths (remove qml/ prefix)
 # foreach(qml_file ${QATERIAL_QML})
 #     get_filename_component(file_name ${qml_file} NAME)
