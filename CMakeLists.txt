@@ -56,8 +56,9 @@ qt_generate_qrc_alias_qt_object(
 set(QATERIAL_RESOURCES Baterial.qrc Shaders.qrc)
 
 # Sources
-file(GLOB_RECURSE QATERIAL_SRCS "src/*.cpp" "src/*.hpp")
-file(GLOB_RECURSE QATERIAL_QML RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "qml/*.qml")
+# Use CONFIGURE_DEPENDS so CMake regenerates when files are added/removed.
+file(GLOB_RECURSE QATERIAL_SRCS CONFIGURE_DEPENDS "src/*.cpp" "src/*.hpp")
+file(GLOB_RECURSE QATERIAL_QML CONFIGURE_DEPENDS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "qml/*.qml")
 
 # Set singleton properties for specific files
 set(singleton_files
@@ -66,6 +67,8 @@ set(singleton_files
     "qml/Icons.qml"
     "qml/Calendar.qml"
     "qml/HugeIcons.qml"
+    "qml/Runtime.qml"
+    "qml/SvgTintCache.qml"
     "qml/DataFormat.qml"
     "qml/DateFormat.qml"
     "qml/DialogManager.qml"

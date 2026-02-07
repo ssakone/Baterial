@@ -27,6 +27,7 @@
 #include <QtCore/QUrl>
 #include <QtCore/QLoggingCategory>
 #include <QtQml/QQmlFile>
+#include <QtCore/qglobal.h>
 
 Q_LOGGING_CATEGORY(qaterialTextFile, "qaterial.textfile")
 
@@ -63,14 +64,21 @@ QString TextFile::fileType() const
 
 bool TextFile::open(QUrl url, int mode)
 {
-    qCDebug(qaterialTextFile) << "open file : " << url;
+    // Avoid spamming logs in normal runs. Enable with: QATERIAL_TEXTFILE_LOG_OPEN=1
+    static const bool logOpen = qEnvironmentVariableIsSet("QATERIAL_TEXTFILE_LOG_OPEN");
+    if(logOpen)
+        qCDebug(qaterialTextFile) << "open file:" << url;
 
     // Make sure url is valid as a local file
     if(url.isRelative())
         url = "file:" + url.toString();
     setFileUrl(url);
     _error = "";
-    const auto localFile = url.toLocalFile();
+    // Support both file:/... and qrc:/... urls.
+    // For qrc, toLocalFile() is empty, but QQmlFile can map to a :/ path readable by QFile.
+    auto localFile = url.toLocalFile();
+    if(localFile.isEmpty())
+        localFile = QQmlFile::urlToLocalFileOrQrc(url);
 
     if(localFile.isEmpty())
     {

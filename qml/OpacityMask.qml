@@ -51,6 +51,7 @@
  ****************************************************************************/
 import QtQuick
 import QtQuick.Effects
+import QtQuick.Window
 
 
 /*!
@@ -99,8 +100,12 @@ Item {
         hideSource: true
         visible: false
         smooth: true
-        textureSize: Qt.size(width * Screen.devicePixelRatio * 4.0,
-                             height * Screen.devicePixelRatio * 4.0)
+        mipmap: true
+        // Screen.devicePixelRatio is always available via the QtQuick.Window attached property.
+        // Do NOT use Window.window.devicePixelRatio: it is not a QML property on all Qt versions.
+        readonly property real _dpr: (Screen.devicePixelRatio || 1.0)
+        textureSize: Qt.size(Math.ceil(width * _dpr * 4.0),
+                             Math.ceil(height * _dpr * 4.0))
         anchors.fill: parent
     }
 

@@ -68,6 +68,10 @@ Item
 {
   id: rootItem
 
+  // Multiplier applied to offscreen texture size. Higher values reduce aliasing/pixelation at the cost of GPU memory.
+  // Kept at 4.0 to preserve previous behaviour.
+  property real renderScale: 4.0
+
   /*!
       This property defines the source item that provides the source pixels
       for the effect.
@@ -110,7 +114,11 @@ Item
     hideSource: true
     visible: false
     smooth: true
-    textureSize: Qt.size(width * Screen.devicePixelRatio * 4.0, height * Screen.devicePixelRatio * 4.0)
+    mipmap: true
+    // Screen.devicePixelRatio is always available via the QtQuick.Window attached property.
+    // Do NOT use Window.window.devicePixelRatio: it is not a QML property on all Qt versions.
+    readonly property real _dpr: (Screen.devicePixelRatio || 1.0)
+    textureSize: Qt.size(Math.ceil(width * _dpr * rootItem.renderScale), Math.ceil(height * _dpr * rootItem.renderScale))
     anchors.fill: parent
   }
 
