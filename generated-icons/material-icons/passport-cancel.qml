@@ -1,0 +1,44 @@
+// Generated from passport-cancel.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/material-icons/passport-cancel.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: "transparent"
+            fillColor: useTint ? tintColor : "#ff000000"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic | ShapePath.PathNonIntersecting | ShapePath.PathNonOverlappingControlPointTriangles
+            PathSvg { path: "M 6 2 Q 5.16447 2 4.59 2.59 Q 4 3.16447 4 4 L 4 20 Q 4 20.8355 4.59 21.41 Q 5.16447 22 6 22 L 13 22 Q 12.1462 20.6087 12 19 L 7 19 L 7 17 L 12.17 17 Q 12.4684 15.7907 13.1 14.88 Q 12.56 15 12 15 Q 9.9357 15 8.46 13.54 Q 7 12.0643 7 10 Q 7 7.9357 8.46 6.46 Q 9.9357 5 12 5 Q 14.0643 5 15.54 6.46 Q 17 7.9357 17 10 Q 17 11.2563 16.42 12.34 Q 17.4245 12 18.5 12 Q 19.2273 12 20 12.17 L 20 4 Q 20 3.16447 19.41 2.59 Q 18.8355 2 18 2 L 6 2 M 12 6 Q 11.6794 6.48476 11.445 6.96625 Q 11.1922 7.48553 11.04 8 L 12.96 8 Q 12.654 6.96543 12 6 M 10.7 6.22 Q 9.25704 6.70622 8.54 8 L 10 8 Q 10.3 6.96667 10.7 6.22 M 13.29 6.22 Q 13.5084 6.62761 13.69 7.0875 Q 13.8602 7.51834 14 8 L 15.46 8 Q 14.7561 6.72995 13.29 6.22 M 8.13 9 Q 8 9.52 8 10 Q 8 10.48 8.13 11 L 9.82 11 Q 9.78658 10.7243 9.77 10.5037 Q 9.75 10.2378 9.75 10 Q 9.75 9.76225 9.77 9.49625 Q 9.78658 9.27568 9.82 9 L 8.13 9 M 10.83 9 Q 10.7914 9.24704 10.7712 9.4925 Q 10.75 9.75136 10.75 10 Q 10.75 10.2468 10.7712 10.5037 Q 10.791 10.7427 10.83 11 L 13.17 11 Q 13.25 10.34 13.25 10 Q 13.25 9.77167 13.225 9.4925 L 13.17 9 L 10.83 9 M 14.18 9 Q 14.2134 9.27568 14.23 9.49625 Q 14.25 9.76225 14.25 10 Q 14.25 10.2378 14.23 10.5037 Q 14.2134 10.7243 14.18 11 L 15.87 11 Q 16 10.48 16 10 Q 16 9.52 15.87 9 L 14.18 9 M 8.54 12 Q 9.24627 13.2744 10.7 13.78 Q 10.2898 13.0143 10 12 L 8.54 12 M 11.04 12 Q 11.3261 12.9809 12 14 Q 12.3237 13.5221 12.5588 13.0375 Q 12.8062 12.5272 12.96 12 L 11.04 12 M 14 12 Q 13.7216 12.9743 13.29 13.78 Q 14.7561 13.27 15.46 12 L 14 12 M 18.5 23 Q 20.375 23 21.6875 21.6875 Q 23 20.375 23 18.5 Q 23 16.625 21.6875 15.3125 Q 20.375 14 18.5 14 Q 16.625 14 15.3125 15.3125 Q 14 16.625 14 18.5 Q 14 20.375 15.3125 21.6875 Q 16.625 23 18.5 23 M 15.92 17 L 20 21.09 Q 19.3377 21.5 18.5 21.5 Q 17.255 21.5 16.3775 20.6225 Q 15.5 19.745 15.5 18.5 Q 15.5 17.6533 15.92 17 M 21.5 18.5 Q 21.5 19.3377 21.09 20 L 17 15.92 Q 17.6533 15.5 18.5 15.5 Q 19.745 15.5 20.6225 16.3775 Q 21.5 17.255 21.5 18.5 " }
+        }
+    }
+}

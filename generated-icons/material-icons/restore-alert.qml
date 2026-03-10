@@ -1,0 +1,44 @@
+// Generated from restore-alert.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/material-icons/restore-alert.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: "transparent"
+            fillColor: useTint ? tintColor : "#ff000000"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic | ShapePath.PathNonIntersecting | ShapePath.PathNonOverlappingControlPointTriangles
+            PathSvg { path: "M 13 3 Q 9.25 3 6.625 5.625 Q 4 8.25 4 12 L 1 12 L 4.9 15.9 L 5 16 L 9 12 L 6 12 Q 6 9.075 8.0375 7.0375 Q 10.075 5 13 5 Q 15.925 5 17.9625 7.0375 Q 20 9.075 20 12 Q 20 14.925 17.9625 16.9625 Q 15.925 19 13 19 Q 10.0385 19 8.1 16.9 L 6.7 18.3 Q 9.24118 21 13 21 Q 16.75 21 19.375 18.375 Q 22 15.75 22 12 Q 22 8.25 19.375 5.625 Q 16.75 3 13 3 M 12 15 L 14 15 L 14 17 L 12 17 L 12 15 M 12 7 L 14 7 L 14 13 L 12 13 L 12 7 " }
+        }
+    }
+}

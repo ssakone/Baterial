@@ -1,0 +1,44 @@
+// Generated from shower-head.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/material-icons/shower-head.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: "transparent"
+            fillColor: useTint ? tintColor : "#ff000000"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic | ShapePath.PathNonIntersecting | ShapePath.PathNonOverlappingControlPointTriangles
+            PathSvg { path: "M 20 20 Q 20.4142 20 20.7071 20.2929 Q 21 20.5858 21 21 Q 21 21.4142 20.7071 21.7071 Q 20.4142 22 20 22 Q 19.5858 22 19.2929 21.7071 Q 19 21.4142 19 21 Q 19 20.5858 19.2929 20.2929 Q 19.5858 20 20 20 M 16 20 Q 16.4142 20 16.7071 20.2929 Q 17 20.5858 17 21 Q 17 21.4142 16.7071 21.7071 Q 16.4142 22 16 22 Q 15.5858 22 15.2929 21.7071 Q 15 21.4142 15 21 Q 15 20.5858 15.2929 20.2929 Q 15.5858 20 16 20 M 12 20 Q 12.4142 20 12.7071 20.2929 Q 13 20.5858 13 21 Q 13 21.4142 12.7071 21.7071 Q 12.4142 22 12 22 Q 11.5858 22 11.2929 21.7071 Q 11 21.4142 11 21 Q 11 20.5858 11.2929 20.2929 Q 11.5858 20 12 20 M 8 20 Q 8.41421 20 8.70711 20.2929 Q 9 20.5858 9 21 Q 9 21.4142 8.70711 21.7071 Q 8.41421 22 8 22 Q 7.58579 22 7.29289 21.7071 Q 7 21.4142 7 21 Q 7 20.5858 7.29289 20.2929 Q 7.58579 20 8 20 M 4 20 Q 4.41421 20 4.70711 20.2929 Q 5 20.5858 5 21 Q 5 21.4142 4.70711 21.7071 Q 4.41421 22 4 22 Q 3.58579 22 3.29289 21.7071 Q 3 21.4142 3 21 Q 3 20.5858 3.29289 20.2929 Q 3.58579 20 4 20 M 6 17 Q 6.41421 17 6.70711 17.2929 Q 7 17.5858 7 18 Q 7 18.4142 6.70711 18.7071 Q 6.41421 19 6 19 Q 5.58579 19 5.29289 18.7071 Q 5 18.4142 5 18 Q 5 17.5858 5.29289 17.2929 Q 5.58579 17 6 17 M 10 17 Q 10.4142 17 10.7071 17.2929 Q 11 17.5858 11 18 Q 11 18.4142 10.7071 18.7071 Q 10.4142 19 10 19 Q 9.58579 19 9.29289 18.7071 Q 9 18.4142 9 18 Q 9 17.5858 9.29289 17.2929 Q 9.58579 17 10 17 M 14 17 Q 14.4142 17 14.7071 17.2929 Q 15 17.5858 15 18 Q 15 18.4142 14.7071 18.7071 Q 14.4142 19 14 19 Q 13.5858 19 13.2929 18.7071 Q 13 18.4142 13 18 Q 13 17.5858 13.2929 17.2929 Q 13.5858 17 14 17 M 18 17 Q 18.4142 17 18.7071 17.2929 Q 19 17.5858 19 18 Q 19 18.4142 18.7071 18.7071 Q 18.4142 19 18 19 Q 17.5858 19 17.2929 18.7071 Q 17 18.4142 17 18 Q 17 17.5858 17.2929 17.2929 Q 17.5858 17 18 17 M 8 14 Q 8.41421 14 8.70711 14.2929 Q 9 14.5858 9 15 Q 9 15.4142 8.70711 15.7071 Q 8.41421 16 8 16 Q 7.58579 16 7.29289 15.7071 Q 7 15.4142 7 15 Q 7 14.5858 7.29289 14.2929 Q 7.58579 14 8 14 M 12 14 Q 12.4142 14 12.7071 14.2929 Q 13 14.5858 13 15 Q 13 15.4142 12.7071 15.7071 Q 12.4142 16 12 16 Q 11.5858 16 11.2929 15.7071 Q 11 15.4142 11 15 Q 11 14.5858 11.2929 14.2929 Q 11.5858 14 12 14 M 16 14 Q 16.4142 14 16.7071 14.2929 Q 17 14.5858 17 15 Q 17 15.4142 16.7071 15.7071 Q 16.4142 16 16 16 Q 15.5858 16 15.2929 15.7071 Q 15 15.4142 15 15 Q 15 14.5858 15.2929 14.2929 Q 15.5858 14 16 14 M 19 12 L 5 12 L 5 10 L 19 10 L 19 12 M 17.92 9 L 6.08 9 Q 6.395 7.125 7.76 5.76 Q 9.125 4.395 11 4.08 L 11 2 L 13 2 L 13 4.08 Q 14.875 4.395 16.24 5.76 Q 17.605 7.125 17.92 9 " }
+        }
+    }
+}

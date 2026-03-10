@@ -1,0 +1,44 @@
+// Generated from undo-variant.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/material-icons/undo-variant.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: "transparent"
+            fillColor: useTint ? tintColor : "#ff000000"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic | ShapePath.PathNonIntersecting | ShapePath.PathNonOverlappingControlPointTriangles
+            PathSvg { path: "M 13.5 7 Q 16.1924 7 18.0962 8.90381 Q 20 10.8076 20 13.5 Q 20 16.1924 18.0962 18.0962 Q 16.1924 20 13.5 20 L 10 20 L 10 18 L 13.5 18 Q 15.375 18 16.6875 16.6875 Q 18 15.375 18 13.5 Q 18 11.625 16.6875 10.3125 Q 15.375 9 13.5 9 L 7.83 9 L 10.91 12.09 L 9.5 13.5 L 4 8 L 9.5 2.5 L 10.92 3.91 L 7.83 7 L 13.5 7 M 6 18 L 8 18 L 8 20 L 6 20 L 6 18 " }
+        }
+    }
+}

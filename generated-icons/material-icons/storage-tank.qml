@@ -1,0 +1,44 @@
+// Generated from storage-tank.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/material-icons/storage-tank.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: "transparent"
+            fillColor: useTint ? tintColor : "#ff000000"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic | ShapePath.PathNonIntersecting | ShapePath.PathNonOverlappingControlPointTriangles
+            PathSvg { path: "M 17 6 L 16 6 L 16 5 Q 16 4.175 15.4125 3.5875 Q 14.825 3 14 3 L 10 3 Q 9.175 3 8.5875 3.5875 Q 8 4.175 8 5 L 8 6 L 7 6 Q 4.5175 6 2.75875 7.75875 Q 1 9.5175 1 12 Q 1 14.4825 2.75875 16.2412 Q 4.5175 18 7 18 L 7 21 L 9 21 L 9 18 L 15 18 L 15 21 L 17 21 L 17 18 Q 19.4825 18 21.2412 16.2412 Q 23 14.4825 23 12 Q 23 9.5175 21.2412 7.75875 Q 19.4825 6 17 6 M 10 5 L 14 5 L 14 6 L 10 6 L 10 5 " }
+        }
+    }
+}

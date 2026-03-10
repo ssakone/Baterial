@@ -1,0 +1,71 @@
+// Generated from mail-download-01.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/huge-icons/mail-download-01.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: useTint ? tintColor : "#ff141b34"
+            strokeWidth: 1.5
+            capStyle: ShapePath.RoundCap
+            joinStyle: ShapePath.RoundJoin
+            miterLimit: 4
+            fillColor: "transparent"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic
+            PathSvg { path: "M 22 11 L 21.9842 9.52439 Q 21.9271 6.84213 21.7693 5.93374 Q 21.5327 4.57128 20.7551 3.79066 Q 19.9774 3.01005 18.5846 2.76749 Q 17.6561 2.60579 14.9012 2.53657 Q 12.0001 2.46367 9.09882 2.53656 Q 6.34389 2.60577 5.41538 2.76748 Q 4.0226 3.01004 3.24495 3.79065 Q 2.4673 4.57126 2.2307 5.93373 Q 2.07297 6.84202 2.01576 9.52438 Q 1.9843 10.9998 2.01577 12.4756 Q 2.07297 15.158 2.23071 16.0663 Q 2.4673 17.4287 3.24496 18.2094 Q 4.02257 18.99 5.41525 19.2325 Q 6.3437 19.3942 9.0984 19.4634 L 9.09883 19.4634 L 13.5 19.4902 " }
+        }
+        ShapePath {
+            id: _qt_shapePath_1
+            strokeColor: useTint ? tintColor : "#ff141b34"
+            strokeWidth: 1.5
+            capStyle: ShapePath.FlatCap
+            joinStyle: ShapePath.RoundJoin
+            miterLimit: 4
+            fillColor: "transparent"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic
+            PathSvg { path: "M 2 5 L 8.91302 8.92462 Q 10.8073 10 12 10 Q 13.1927 10 15.087 8.92462 L 22 5 " }
+        }
+        ShapePath {
+            id: _qt_shapePath_2
+            strokeColor: useTint ? tintColor : "#ff141b34"
+            strokeWidth: 1.5
+            capStyle: ShapePath.RoundCap
+            joinStyle: ShapePath.RoundJoin
+            miterLimit: 4
+            fillColor: "transparent"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic
+            PathSvg { path: "M 17 19 Q 17.1321 19.1359 17.5454 19.6625 Q 18.9879 21.5 19.5 21.5 M 22 19 Q 21.8679 19.1359 21.4546 19.6625 Q 20.0121 21.5 19.5 21.5 M 19.5 21.5 L 19.5 13.5 " }
+        }
+    }
+}

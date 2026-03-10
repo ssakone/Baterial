@@ -1,0 +1,44 @@
+// Generated from television-classic.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/material-icons/television-classic.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: "transparent"
+            fillColor: useTint ? tintColor : "#ff000000"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic | ShapePath.PathNonIntersecting | ShapePath.PathNonOverlappingControlPointTriangles
+            PathSvg { path: "M 8.16 3 L 6.75 4.41 L 9.34 7 L 4 7 Q 3.1675 7 2.58375 7.58375 Q 2 8.1675 2 9 L 2 19 Q 2 19.8325 2.58375 20.4163 Q 3.1675 21 4 21 L 20 21 Q 20.8325 21 21.4163 20.4163 Q 22 19.8325 22 19 L 22 9 Q 22 8.1675 21.4163 7.58375 Q 20.8325 7 20 7 L 14.66 7 L 17.25 4.41 L 15.84 3 L 12 6.84 L 8.16 3 M 4 9 L 17 9 L 17 19 L 4 19 L 4 9 M 19.5 9 Q 19.9142 9 20.2071 9.29289 Q 20.5 9.58579 20.5 10 Q 20.5 10.4142 20.2071 10.7071 Q 19.9142 11 19.5 11 Q 19.0858 11 18.7929 10.7071 Q 18.5 10.4142 18.5 10 Q 18.5 9.58579 18.7929 9.29289 Q 19.0858 9 19.5 9 M 19.5 12 Q 19.9142 12 20.2071 12.2929 Q 20.5 12.5858 20.5 13 Q 20.5 13.4142 20.2071 13.7071 Q 19.9142 14 19.5 14 Q 19.0858 14 18.7929 13.7071 Q 18.5 13.4142 18.5 13 Q 18.5 12.5858 18.7929 12.2929 Q 19.0858 12 19.5 12 " }
+        }
+    }
+}

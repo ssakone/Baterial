@@ -1,0 +1,44 @@
+// Generated from package-variant-closed-minus.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/material-icons/package-variant-closed-minus.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: "transparent"
+            fillColor: useTint ? tintColor : "#ff000000"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic | ShapePath.PathNonIntersecting | ShapePath.PathNonOverlappingControlPointTriangles
+            PathSvg { path: "M 13 12.6 L 19 9.2 L 19 13 Q 20.2 13 21 13.4 L 21 7.5 Q 21 7.21071 20.8625 6.975 Q 20.7352 6.75682 20.5 6.6 L 12.6 2.2 Q 12.4 2.1 12.3 2.0625 Q 12.1333 2 12 2 Q 11.8668 2 11.7003 2.06237 Q 11.6002 2.09988 11.4007 2.19966 L 11.4 2.2 L 3.5 6.6 Q 3.26477 6.75682 3.1375 6.975 Q 3 7.21071 3 7.5 L 3 16.5 Q 3 16.7893 3.1375 17.025 Q 3.26477 17.2432 3.5 17.4 L 11.4 21.8 Q 11.6 21.9 11.7 21.9375 Q 11.8667 22 12 22 Q 12.1333 22 12.3 21.9375 Q 12.4 21.9 12.6 21.8 L 13.5 21.3 Q 13.3 20.9 13.175 20.3375 Q 13.1 20 13 19.3 L 13 12.6 M 12 4.2 L 18 7.5 L 16 8.6 L 10.1 5.2 L 12 4.2 M 11 19.3 L 5 15.9 L 5 9.2 L 11 12.6 L 11 19.3 M 12 10.8 L 6 7.5 L 8 6.3 L 14 9.8 L 12 10.8 M 23 18 L 23 20 L 15 20 L 15 18 L 23 18 " }
+        }
+    }
+}

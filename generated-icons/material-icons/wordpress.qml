@@ -1,0 +1,44 @@
+// Generated from wordpress.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/material-icons/wordpress.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: "transparent"
+            fillColor: useTint ? tintColor : "#ff000000"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic | ShapePath.PathNonIntersecting | ShapePath.PathNonOverlappingControlPointTriangles
+            PathSvg { path: "M 3.42 12 Q 3.42 11.0878 3.61375 10.19 Q 3.79989 9.32748 4.16 8.5 L 8.26 19.72 Q 6.07257 18.6606 4.76375 16.6138 Q 3.42 14.5123 3.42 12 M 17.79 11.57 Q 17.79 12.2136 17.2645 13.9313 L 17.14 14.34 L 16.28 17.2 L 13.18 8 L 14.16 7.9 Q 14.3266 7.87873 14.4152 7.75953 Q 14.4949 7.65219 14.4838 7.51125 Q 14.4726 7.37075 14.378 7.27984 Q 14.2733 7.17935 14.11 7.19 L 13.3025 7.245 Q 12.3825 7.3 11.82 7.3 L 9.56 7.19 Q 9.39718 7.17938 9.29328 7.28406 Q 9.19993 7.37811 9.18875 7.5225 Q 9.17759 7.66653 9.25484 7.77219 Q 9.34052 7.88937 9.5 7.9 L 10.41 8 L 11.75 11.64 L 9.87 17.27 L 6.74 8 L 7.73 7.9 Q 7.89317 7.87872 7.97937 7.75953 Q 8.05715 7.652 8.045 7.51125 Q 8.03286 7.37059 7.93813 7.27984 Q 7.83322 7.17936 7.67 7.19 L 6.8625 7.245 Q 5.9425 7.3 5.38 7.3 L 4.83 7.29 Q 6.00793 5.50781 7.8675 4.48125 Q 9.78991 3.42 12 3.42 Q 13.6412 3.42 15.1613 4.02375 Q 16.626 4.60552 17.79 5.67 L 17.68 5.67 Q 17.0655 5.67 16.645 6.13375 Q 16.24 6.58044 16.24 7.19 Q 16.24 7.62737 16.462 8.11983 Q 16.5974 8.42013 16.9766 9.03259 L 17.08 9.2 Q 17.79 10.4264 17.79 11.57 M 12.15 12.75 L 14.79 19.97 L 14.85 20.09 Q 13.4872 20.58 12 20.58 Q 10.7517 20.58 9.58 20.23 L 12.15 12.75 M 19.53 7.88 Q 20.58 9.80761 20.58 12 Q 20.58 14.3317 19.4013 16.335 Q 18.2567 18.2801 16.31 19.41 L 18.93 11.84 Q 19.59 10.1967 19.59 8.77 L 19.53 7.88 M 12 2 Q 14.0711 2 15.8388 2.73223 Q 17.6066 3.46447 19.0711 4.92893 Q 20.5355 6.3934 21.2678 8.16117 Q 22 9.92893 22 12 Q 22 14.0711 21.2678 15.8388 Q 20.5355 17.6066 19.0711 19.0711 Q 17.6066 20.5355 15.8388 21.2678 Q 14.0711 22 12 22 Q 9.92893 22 8.16117 21.2678 Q 6.3934 20.5355 4.92893 19.0711 Q 3.46447 17.6066 2.73223 15.8388 Q 2 14.0711 2 12 Q 2 9.92893 2.73223 8.16117 Q 3.46447 6.3934 4.92893 4.92893 Q 6.3934 3.46447 8.16117 2.73223 Q 9.92893 2 12 2 M 12 21.54 Q 13.9725 21.54 15.6581 20.8406 Q 17.3438 20.1413 18.7425 18.7425 Q 20.1413 17.3438 20.8406 15.6581 Q 21.54 13.9725 21.54 12 Q 21.54 10.0275 20.8406 8.34188 Q 20.1413 6.65625 18.7425 5.2575 Q 17.3438 3.85875 15.6581 3.15937 Q 13.9725 2.46 12 2.46 Q 10.0275 2.46 8.34188 3.15938 Q 6.65625 3.85875 5.2575 5.2575 Q 3.85875 6.65625 3.15937 8.34188 Q 2.46 10.0275 2.46 12 Q 2.46 13.9725 3.15938 15.6581 Q 3.85875 17.3438 5.2575 18.7425 Q 6.65625 20.1413 8.34188 20.8406 Q 10.0275 21.54 12 21.54 " }
+        }
+    }
+}

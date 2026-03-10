@@ -1,0 +1,44 @@
+// Generated from webhook.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/material-icons/webhook.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: "transparent"
+            fillColor: useTint ? tintColor : "#ff000000"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic | ShapePath.PathNonIntersecting | ShapePath.PathNonOverlappingControlPointTriangles
+            PathSvg { path: "M 10.46 19 Q 9.36423 20.5536 7.5 20.8913 Q 5.63392 21.2292 4.09 20.15 Q 2.55422 19.0712 2.23625 17.1938 Q 1.91878 15.3193 3 13.75 Q 3.6381 12.8332 4.6025 12.3138 Q 5.52636 11.8161 6.58 11.77 L 6.63 13.2 Q 5.93365 13.2536 5.3225 13.5988 Q 4.68976 13.9561 4.27 14.56 Q 3.52095 15.6386 3.72125 16.9112 Q 3.92119 18.1816 4.95 18.91 Q 5.98619 19.6308 7.2475 19.3862 Q 8.51086 19.1413 9.26 18.07 Q 9.48806 17.7389 9.63 17.3687 Q 9.76637 17.0131 9.82 16.63 L 9.82 15.62 L 15.4 15.58 L 15.47 15.47 Q 15.8674 14.7802 16.6213 14.57 Q 17.3748 14.3599 18.05 14.75 Q 18.7263 15.1408 18.9263 15.9 Q 19.1267 16.6614 18.73 17.35 Q 18.3323 18.0329 17.5737 18.2412 Q 16.8146 18.4498 16.14 18.06 Q 15.5177 17.7109 15.31 17.04 L 11.24 17.06 Q 11.0739 18.0717 10.46 19 M 17.74 11.86 Q 19.6375 12.0925 20.815 13.5775 Q 21.9925 15.0625 21.76 16.93 Q 21.5275 18.8046 20.0225 19.9638 Q 18.5179 21.1225 16.62 20.89 Q 15.5222 20.7574 14.6125 20.16 Q 13.733 19.5825 13.19 18.68 L 14.43 17.96 Q 15.2267 19.212 16.75 19.41 Q 18.0586 19.567 19.0825 18.79 Q 20.102 18.0163 20.26 16.76 Q 20.4175 15.5078 19.6075 14.5075 Q 18.7978 13.5075 17.5 13.35 Q 16.7103 13.2622 15.97 13.53 L 15.12 13.97 L 12.54 9.2 L 12.32 9.2 Q 11.526 9.17004 10.9862 8.6 Q 10.4475 8.03095 10.47 7.25 Q 10.4924 6.47225 11.0775 5.94 Q 11.6602 5.40991 12.45 5.44 Q 13.2418 5.48525 13.78 6.0475 Q 14.3224 6.61417 14.3 7.39 Q 14.2702 8.04609 13.84 8.54 L 15.74 12.05 Q 16.6981 11.7409 17.74 11.86 M 8.25 9.14 Q 7.50009 7.37771 8.19375 5.61625 Q 8.8873 3.85509 10.62 3.12 Q 12.3595 2.3852 14.115 3.11125 Q 15.8698 3.83702 16.62 5.6 Q 17.055 6.61018 16.9925 7.69875 Q 16.9319 8.75312 16.42 9.67 L 15.18 8.95 Q 15.5025 8.32808 15.5325 7.63 Q 15.5638 6.90301 15.27 6.22 Q 14.7601 5.02013 13.5763 4.51625 Q 12.3926 4.01245 11.23 4.5 Q 10.0619 4.99421 9.6 6.1975 Q 9.13918 7.39806 9.65 8.6 Q 9.85585 9.08522 10.2013 9.475 Q 10.5329 9.84928 10.97 10.11 L 11.36 10.32 L 8.29 15.31 L 8.30398 15.333 Q 8.36446 15.4319 8.39 15.5 Q 8.7583 16.184 8.53375 16.9325 Q 8.30851 17.6833 7.62 18.05 Q 6.93672 18.4179 6.18625 18.1812 Q 5.43457 17.9442 5.06 17.24 Q 4.692 16.5415 4.91625 15.79 Q 5.14093 15.037 5.83 14.67 Q 6.4105 14.3574 7.06 14.5 L 9.37 10.73 Q 9.00695 10.3978 8.7275 10.0063 Q 8.43274 9.5932 8.25 9.14 " }
+        }
+    }
+}

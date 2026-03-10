@@ -1,0 +1,59 @@
+// Generated from edit-03.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/huge-icons/edit-03.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: useTint ? tintColor : "#ff141b34"
+            strokeWidth: 1.5
+            capStyle: ShapePath.RoundCap
+            joinStyle: ShapePath.RoundJoin
+            miterLimit: 4
+            fillColor: "#00000000"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic | ShapePath.PathNonIntersecting | ShapePath.PathNonOverlappingControlPointTriangles
+            PathSvg { path: "M 3.78181 16.3092 L 3 21 L 7.69086 20.2182 Q 8.94333 20.0096 9.84119 19.1116 L 20.4198 8.53288 Q 21 7.95263 21 7.13206 Q 21 6.31148 20.4197 5.73126 L 18.2687 3.58024 Q 17.6884 2.99999 16.8678 3 Q 16.0472 3.00001 15.4669 3.58027 L 4.88841 14.159 Q 3.99056 15.0568 3.78181 16.3092 " }
+        }
+        ShapePath {
+            id: _qt_shapePath_1
+            strokeColor: useTint ? tintColor : "#ff141b34"
+            strokeWidth: 1.5
+            capStyle: ShapePath.RoundCap
+            joinStyle: ShapePath.RoundJoin
+            miterLimit: 4
+            fillColor: "transparent"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathQuadratic
+            PathSvg { path: "M 14 6 L 18 10 " }
+        }
+    }
+}

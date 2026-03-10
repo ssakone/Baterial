@@ -1,0 +1,44 @@
+// Generated from gradient-horizontal.svg
+// Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/material-icons/gradient-horizontal.svg
+import QtQuick
+import QtQuick.VectorImage
+import QtQuick.VectorImage.Helpers
+import QtQuick.Shapes
+
+Item {
+    implicitWidth: 24
+    implicitHeight: 24
+    // Dynamic color properties for runtime tinting
+    property color tintColor: "#ff000000"
+    property bool useTint: true
+
+
+
+
+
+
+
+    component AnimationsInfo : QtObject
+    {
+        property bool paused: false
+        property int loops: 1
+        signal restart()
+    }
+    property AnimationsInfo animations : AnimationsInfo {}
+    transform: [
+        Scale { xScale: width / 24; yScale: height / 24 }
+    ]
+    id: __qt_toplevel
+    Shape {
+        preferredRendererType: Shape.CurveRenderer
+        id: _qt_node0
+        ShapePath {
+            id: _qt_shapePath_0
+            strokeColor: "transparent"
+            fillColor: useTint ? tintColor : "#ff000000"
+            fillRule: ShapePath.WindingFill
+            pathHints: ShapePath.PathNonIntersecting | ShapePath.PathNonOverlappingControlPointTriangles
+            PathSvg { path: "M 9 13 L 9 11 L 11 11 L 11 13 L 9 13 M 11 15 L 11 13 L 13 13 L 13 11 L 11 11 L 11 9 L 13 9 L 13 7 L 15 7 L 15 5 L 13 5 L 13 7 L 11 7 L 11 9 L 9 9 L 9 7 L 11 7 L 11 5 L 5 5 L 5 19 L 11 19 L 11 17 L 9 17 L 9 15 L 11 15 L 11 17 L 13 17 L 13 19 L 15 19 L 15 17 L 13 17 L 13 15 L 11 15 M 3 5 Q 3 4.175 3.5875 3.5875 Q 4.175 3 5 3 L 19 3 Q 19.825 3 20.4125 3.5875 Q 21 4.175 21 5 L 21 19 Q 21 19.825 20.4125 20.4125 Q 19.825 21 19 21 L 5 21 Q 4.175 21 3.5875 20.4125 Q 3 19.825 3 19 L 3 5 M 18 15 L 16 15 L 16 17 L 18 17 L 18 15 M 18 11 L 16 11 L 16 13 L 18 13 L 18 11 M 18 7 L 16 7 L 16 9 L 18 9 L 18 7 M 13 15 L 15 15 L 15 13 L 13 13 L 13 15 M 13 11 L 15 11 L 15 9 L 13 9 L 13 11 " }
+        }
+    }
+}
