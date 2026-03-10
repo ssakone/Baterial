@@ -84,7 +84,7 @@ Item
       {
         anchors.centerIn: parent
         color: Qaterial.Style.primaryTextColor()
-        source: Qaterial.Icons.check
+        source: Qaterial.MaterialIconsQml.check
       } // ColorIcon
     } // Component
     Component

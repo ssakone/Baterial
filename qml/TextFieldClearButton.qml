@@ -11,7 +11,7 @@ import Qaterial as Qaterial
 
 Qaterial.TextFieldIconButton
 {
-  icon.source: Qaterial.Icons.closeCircle
+  icon.source: Qaterial.MaterialIconsQml.closeCircle
   onClicked: function()
   {
     if(textField) textField.clear()

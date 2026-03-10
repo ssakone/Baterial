@@ -27,7 +27,7 @@ Item
     anchors.left: parent.left
 
     enabled: root.previousMonthEnabled
-    icon.source: Qaterial.Icons.chevronLeft
+    icon.source: Qaterial.MaterialIconsQml.chevronLeft
 
     onClicked: () => root.previousMonth()
   }
@@ -73,7 +73,7 @@ Item
     anchors.right: parent.right
 
     enabled: root.nextMonthEnabled
-    icon.source: Qaterial.Icons.chevronRight
+    icon.source: Qaterial.MaterialIconsQml.chevronRight
 
     onClicked: () => root.nextMonth()
   }

@@ -33,75 +33,75 @@ T.ItemDelegate
     const ext = model.fileCompleteSuffix
 
     if(model.isDir)
-      return model.expanded ? Qaterial.Icons.folderOutline : Qaterial.Icons.folder
+      return model.expanded ? Qaterial.MaterialIconsQml.folderOutline : Qaterial.MaterialIconsQml.folder
 
     if(model.fileBaseName === "")
-      return Qaterial.Icons.asterisk
+      return Qaterial.MaterialIconsQml.asterisk
 
     if(ext == 'cpp' || ext == 'hpp' || ext == 'cxx' || ext == 'hxx' || ext == 'cc')
-      return Qaterial.Icons.languageCpp
+      return Qaterial.MaterialIconsQml.languageCpp
 
     if(ext == 'c' || ext == 'h')
-      return Qaterial.Icons.languageC
+      return Qaterial.MaterialIconsQml.languageC
 
     if(ext == 'cs')
-      return Qaterial.Icons.languageCsharp
+      return Qaterial.MaterialIconsQml.languageCsharp
 
     if(ext == 'css')
-      return Qaterial.Icons.languageCss3
+      return Qaterial.MaterialIconsQml.languageCss3
 
     if(ext == 'go')
-      return Qaterial.Icons.languageGo
+      return Qaterial.MaterialIconsQml.languageGo
 
     if(ext == 'html')
-      return Qaterial.Icons.languageHtml
+      return Qaterial.MaterialIconsQml.languageHtml
 
     if(ext == 'java')
-      return Qaterial.Icons.languageJava
+      return Qaterial.MaterialIconsQml.languageJava
 
     if(ext == 'js')
-      return Qaterial.Icons.languageJavascript
+      return Qaterial.MaterialIconsQml.languageJavascript
 
     if(ext == 'kt')
-      return Qaterial.Icons.languageKotlin
+      return Qaterial.MaterialIconsQml.languageKotlin
 
     if(ext == 'lua')
-      return Qaterial.Icons.languageLua
+      return Qaterial.MaterialIconsQml.languageLua
 
     if(ext == 'md')
-      return Qaterial.Icons.languageMarkdown
+      return Qaterial.MaterialIconsQml.languageMarkdown
 
     if(ext == 'php')
-      return Qaterial.Icons.languagePhp
+      return Qaterial.MaterialIconsQml.languagePhp
 
     if(ext == 'py')
-      return Qaterial.Icons.languagePython
+      return Qaterial.MaterialIconsQml.languagePython
 
     if(ext == 'ruby')
-      return Qaterial.Icons.languageRuby
+      return Qaterial.MaterialIconsQml.languageRuby
 
     if(ext == 'ts')
-      return Qaterial.Icons.languageTypescript
+      return Qaterial.MaterialIconsQml.languageTypescript
 
     if(ext == 'swift')
-      return Qaterial.Icons.languageSwift
+      return Qaterial.MaterialIconsQml.languageSwift
 
     if(ext == 'xaml')
-      return Qaterial.Icons.languageXaml
+      return Qaterial.MaterialIconsQml.languageXaml
 
     if(ext == 'txt')
-      return Qaterial.Icons.text
+      return Qaterial.MaterialIconsQml.text
 
     if(ext == 'json')
-      return Qaterial.Icons.text
+      return Qaterial.MaterialIconsQml.text
 
     if(ext.includes('vcxproj') || ext == 'sln')
-      return Qaterial.Icons.microsoftVisualStudioCode
+      return Qaterial.MaterialIconsQml.microsoftVisualStudioCode
 
     if(ext == 'png' || ext == 'jpg' || ext == 'jpeg' || ext == 'svg')
-      return Qaterial.Icons.codeJson
+      return Qaterial.MaterialIconsQml.codeJson
 
-    return Qaterial.Icons.codeTags
+    return Qaterial.MaterialIconsQml.codeTags
   }
 
   implicitWidth: Math.max(background ? implicitBackgroundWidth : 0,

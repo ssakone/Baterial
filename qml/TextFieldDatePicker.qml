@@ -13,7 +13,7 @@ Qaterial.TextFieldDate
   {
     Qaterial.TextFieldIconButton
     {
-      icon.source: Qaterial.Icons.calendar
+      icon.source: Qaterial.MaterialIconsQml.calendar
       onClicked: Qaterial.DialogManager.openFromComponent(_datePickerDialogComponent)
 
       Component

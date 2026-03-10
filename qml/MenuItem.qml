@@ -69,7 +69,7 @@ T.MenuItem
     readonly property double width: Qaterial.Style.menuItem.iconWidth
     readonly property double height: Qaterial.Style.menuItem.iconWidth
     readonly property color color: foregroundColor
-    readonly property url source: Qaterial.Icons.check
+    readonly property url source: Qaterial.MaterialIconsQml.check
   } // QtObject
 
   property
@@ -78,7 +78,7 @@ T.MenuItem
     readonly property double width: Qaterial.Style.menuItem.iconWidth
     readonly property double height: Qaterial.Style.menuItem.iconWidth
     readonly property color color: foregroundColor
-    readonly property url source: _control.checked ? Qaterial.Icons.radioboxMarked : Qaterial.Icons.radioboxBlank
+    readonly property url source: _control.checked ? Qaterial.MaterialIconsQml.radioboxMarked : Qaterial.MaterialIconsQml.radioboxBlank
   } // QtObject
 
   font: Qaterial.Style.textTheme.body2
@@ -86,7 +86,7 @@ T.MenuItem
   icon.width: Qaterial.Style.menuItem.iconWidth
   icon.height: Qaterial.Style.menuItem.iconWidth
   icon.color: foregroundColor
-  icon.source: checkable && checked ? Qaterial.Icons.check : ""
+  icon.source: checkable && checked ? Qaterial.MaterialIconsQml.check : ""
 
   property bool clipRipple: true
   property bool forceRipple: false
@@ -128,7 +128,7 @@ T.MenuItem
     visible: _control.subMenu
     mirror: _control.mirrored
     color: _control.foregroundColor
-    source: Qaterial.Icons.menuRight
+    source: Qaterial.MaterialIconsQml.menuRight
   } // ColorIcon
 
   contentItem: Qaterial.IconLabel

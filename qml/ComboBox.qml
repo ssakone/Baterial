@@ -49,7 +49,7 @@ T.ComboBox
     x: _control.mirrored ? _control.padding : _control.width - width - _control.padding
     y: _control.topPadding + (_control.availableHeight - height) / 2
     color: _control.enabled ? _control.Material.foreground : _control.Material.hintTextColor
-    source: Qaterial.Icons.menuDown
+    source: Qaterial.MaterialIconsQml.menuDown
   } // ColorImage
 
   contentItem: T.TextField

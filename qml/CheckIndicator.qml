@@ -87,7 +87,7 @@ Item
       }
 
       size: Qaterial.Style.checkIndicator.iconWidth
-      icon: Qaterial.Icons.check
+      icon: Qaterial.MaterialIconsQml.check
       color: root.indicatorColor
 
       scale: root.checkState === Qt.Checked ? 1 : 0

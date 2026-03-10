@@ -39,7 +39,7 @@ Rectangle
       Qaterial.AppBarButton
       {
         id: _expandButton
-        icon.source: _root.expanded ? Qaterial.Icons.menuDown : Qaterial.Icons.menuRight
+        icon.source: _root.expanded ? Qaterial.MaterialIconsQml.menuDown : Qaterial.MaterialIconsQml.menuRight
         backgroundImplicitWidth: Qaterial.Style.dense ? 12 : 16
         backgroundImplicitHeight: Qaterial.Style.dense ? 12 : 16
         leftPadding: 0

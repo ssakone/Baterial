@@ -13,7 +13,7 @@ Qaterial.TextFieldIcon
 {
   id: _control
   color: Qaterial.Style.errorColor
-  source: Qaterial.Icons.alertCircle
+  source: Qaterial.MaterialIconsQml.alertCircle
   onVisibleChanged: function()
   {
     if(visible)

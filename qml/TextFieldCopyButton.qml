@@ -11,7 +11,7 @@ import Qaterial as Qaterial
 
 Qaterial.TextFieldIconButton
 {
-  icon.source: Qaterial.Icons.contentCopy
+  icon.source: Qaterial.MaterialIconsQml.contentCopy
   onClicked:
   {
     if(textField)
