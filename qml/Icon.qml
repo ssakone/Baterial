@@ -50,12 +50,17 @@ Item
   property url icon: ""
   property real size: Qaterial.Style.smallIcon
   property bool cached: true
+  property bool pixelSnap: true
 
   readonly property real _implicitSize: icon.toString() ? size : 0
   readonly property bool isImage: color.a === 0
   readonly property string _iconStr: icon ? icon.toString() : ""
   readonly property bool _isSvg: _iconStr.toLowerCase().lastIndexOf(".svg") === (_iconStr.length - 4)
   readonly property bool _isQaterialPackSvg: _iconStr.indexOf("/assets/material-icons/") !== -1 || _iconStr.indexOf("/assets/huge-icons/") !== -1
+  readonly property real _contentX: pixelSnap ? _alignToPixel(x) - x : 0
+  readonly property real _contentY: pixelSnap ? _alignToPixel(y) - y : 0
+  readonly property real _contentWidth: pixelSnap ? _alignToPixel(width) : width
+  readonly property real _contentHeight: pixelSnap ? _alignToPixel(height) : height
 
   readonly property bool _vectorAvailable: Qaterial.Runtime.vectorImageAvailable
   property bool _vectorBroken: false
@@ -85,10 +90,25 @@ Item
   implicitWidth: _implicitSize
   implicitHeight: _implicitSize
 
+  function _alignToPixel(value)
+  {
+    const dpr = _dpr > 0 ? _dpr : 1.0
+    return Math.round(value * dpr) / dpr
+  }
+
+  Item
+  {
+    id: contentLayer
+    x: root._contentX
+    y: root._contentY
+    width: root._contentWidth
+    height: root._contentHeight
+  }
+
   Item
   {
     id: vectorLayer
-    anchors.fill: parent
+    anchors.fill: contentLayer
     visible: root.useVector
     opacity: root.isImage ? 1.0 : root._effectiveColor.a
   }
@@ -108,8 +128,6 @@ Item
       return
 
     if(!root.preferVector)
-      return
-    if(root.isImage)
       return
     if(!root._isSvg)
       return
@@ -151,19 +169,19 @@ Item
   {
     id: dummyImage
 
-    anchors.fill: parent
+    anchors.fill: contentLayer
 
     fillMode: Image.PreserveAspectFit
     smooth: true
     mipmap: true
     source: root.useVector ? "" : root.icon
-    sourceSize: Qt.size(Math.ceil(root.width * root._dpr * root._rasterScale), Math.ceil(root.height * root._dpr * root._rasterScale))
+    sourceSize: Qt.size(Math.ceil(contentLayer.width * root._dpr * root._rasterScale), Math.ceil(contentLayer.height * root._dpr * root._rasterScale))
     visible: root.isImage && root.enabled && !root.useVector
   } // Image
 
   ColorOverlay
   {
-    anchors.fill: parent
+    anchors.fill: contentLayer
 
     source: dummyImage
     renderScale: root._rasterScale
@@ -176,7 +194,7 @@ Item
 
   Colorize
   {
-    anchors.fill: parent
+    anchors.fill: contentLayer
 
     source: dummyImage
     hue: 0

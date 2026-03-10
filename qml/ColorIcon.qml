@@ -18,6 +18,7 @@ Item
   // Default is conservative: only auto-enable for known Qaterial SVG packs.
   property bool preferVector: true
   property bool vectorForAllSvg: false
+  property bool pixelSnap: true
 
   // Multiplier applied to SVG rasterization size. Higher values improve quality when the icon is transformed/scaled,
   // at the cost of render time and memory.
@@ -45,7 +46,10 @@ Item
   // Do NOT use Window.window.devicePixelRatio: it is not a QML property on all Qt versions.
   readonly property real _dpr: (Screen.devicePixelRatio || 1.0)
   readonly property real _imageSize: root.roundIcon ? root.iconSize : Math.min(root.width, root.height)
-  readonly property int _sourceSizePx: Math.ceil(root._imageSize * root._dpr * root._rasterScale)
+  readonly property real _alignedImageSize: pixelSnap ? _alignToPixel(root._imageSize) : root._imageSize
+  readonly property real _alignedImageX: pixelSnap ? _alignToPixel((root.width - root._alignedImageSize) / 2) : (root.width - root._imageSize) / 2
+  readonly property real _alignedImageY: pixelSnap ? _alignToPixel((root.height - root._alignedImageSize) / 2) : (root.height - root._imageSize) / 2
+  readonly property int _sourceSizePx: Math.ceil(root._alignedImageSize * root._dpr * root._rasterScale)
 
   // ICON CONTROL
   property url source: ""
@@ -66,6 +70,12 @@ Item
 
   property double iconSize: 24
   property double roundSize: 40
+
+  function _alignToPixel(value)
+  {
+    const dpr = _dpr > 0 ? _dpr : 1.0
+    return Math.round(value * dpr) / dpr
+  }
 
   Rectangle
   {
@@ -100,9 +110,10 @@ Item
   Item
   {
     id: vectorHost
-    width: root._imageSize
-    height: root._imageSize
-    anchors.centerIn: parent
+    x: root._alignedImageX
+    y: root._alignedImageY
+    width: root._alignedImageSize
+    height: root._alignedImageSize
     visible: root.useVector
 
     // Mirror horizontally (Image has built-in mirror; VectorImage does not).
@@ -168,15 +179,16 @@ Item
   Image
   {
     id: _image
-    width: root._imageSize
-    height: root._imageSize
+    x: root._alignedImageX
+    y: root._alignedImageY
+    width: root._alignedImageSize
+    height: root._alignedImageSize
     visible: false
     fillMode: Image.PreserveAspectFit
     smooth: true
     mipmap: true
     source: root.useVector ? "" : root.source
     sourceSize: Qt.size(root._sourceSizePx, root._sourceSizePx)
-    anchors.centerIn: parent
   } // Image
 
   ColorOverlay
