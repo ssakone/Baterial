@@ -1,8 +1,6 @@
 // Generated from note-done.svg
 // Generated from SVG file /Users/enokas/WorkStation/01STUDIO/BMASTER/3rd/Qaterial/assets/huge-icons/note-done.svg
 import QtQuick
-import QtQuick.VectorImage
-import QtQuick.VectorImage.Helpers
 import QtQuick.Shapes
 
 Item {
@@ -11,6 +9,7 @@ Item {
     // Dynamic color properties for runtime tinting
     property color tintColor: "#ff000000"
     property bool useTint: true
+
 
 
 

@@ -191,6 +191,11 @@ def inject_color_properties(qml_path: Path) -> None:
     try:
         content = qml_path.read_text()
 
+        # svgtoqml adds VectorImage imports even when the generated file only uses
+        # QtQuick + QtQuick.Shapes types. Keeping those imports forces an extra QML
+        # module dependency on Windows deployments.
+        content = re.sub(r'^import QtQuick\.VectorImage(?:\.Helpers)?\n', '', content, flags=re.MULTILINE)
+
         color_properties = (
             "    // Dynamic color properties for runtime tinting\n"
             "    property color tintColor: \"#ff000000\"\n"
